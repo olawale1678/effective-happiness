@@ -1,0 +1,43 @@
+@import "responsive-setup";
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    color: $color-grey-dark-2;
+    font-weight: lighter;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 80vh auto 40vw repeat(3, auto);
+    grid-template-columns: [sidebar-start]4rem[sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem)[col-end]) [center-end]  minmax(6rem, 1fr) [full-end];
+    @include phone{
+        grid-template-columns: [sidebar-start]0rem[sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem)[col-end]) [center-end]  minmax(6rem, 1fr) [full-end];
+    }
+    @include phone-2{
+        grid-template-columns: [sidebar-start]0rem[sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem)[col-end]) [center-end]  minmax(6rem, 1fr) [full-end];
+    }
+    @include tablet{
+        grid-template-columns: [sidebar-start]0rem[sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem)[col-end]) [center-end]  minmax(6rem, 1fr) [full-end];
+    }
+    &>*{
+        padding: 4rem;
+        font-size: 3rem;
+    }
+}
+::selection{
+    background-color: $color-primary;
+    color: white;
+}

@@ -1,0 +1,87 @@
+@import "responsive-setup";
+
+.features{
+    grid-column: center-start/center-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    margin: 8rem 0rem;
+    font-size: 17px;
+    overflow: hidden;
+    @include phone{
+        margin: 16rem 0rem 3rem 0rem;
+        width: 100vw;
+        transform: translateX(-4rem);
+    }
+    @include phone-2{
+        margin: 16rem 0rem 3rem 0rem;
+        width: 100vw;
+        transform: translateX(-2rem);
+        column-gap: 0rem;
+        row-gap: 4rem;
+        overflow: hidden;
+        
+    }
+    @include tablet{
+        margin: 16rem 0rem 3rem 0rem;
+        width: 100vw;
+        transform: translateX(-2rem);
+        column-gap: 0rem;
+        row-gap: 4rem;
+        overflow: hidden;
+        
+    }
+
+    .feature{
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        row-gap: 1.5rem;
+        column-gap: 2.5rem;
+        @include phone{
+            column-gap: 1.4rem;
+        }
+        @include phone-2{
+            column-gap: 1.4rem;
+        }
+        @include tablet{
+            column-gap: 1.4rem;
+        }
+
+        &__image{
+            height: 35px;
+            grid-row: 1 span 2;
+            transform: translateY(-1rem);
+            width: 35px;
+        }
+    
+        h4{
+            color: $color-grey-dark-2;
+            @include phone{
+                font-size: 1.797rem;
+            }
+            @include phone-2{
+                font-size: 1.797rem;
+            }
+            @include tablet{
+                font-size: 1.797rem;
+            }
+        }
+
+        &__text{
+            grid-column: 2/3;
+            @include phone{
+                font-size: 1.67rem;
+            }
+            @include phone-2{
+                font-size: 1.77rem;
+                padding-right: 7rem;
+            }
+            @include tablet{
+                font-size: 1.77rem;
+                padding-right: 7rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.realtors{
+    background-color: $color-secondary;
+    grid-column: col-start 7/full-end;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    @include phone{
+        width: 100vw;
+        position: absolute;
+        top: 65%;
+        left: 0px;
+        padding: 5rem 0rem;
+    }
+    @include phone-2{
+        width: 100vw;
+        position: absolute;
+        top: 60%;
+        left: 0px;
+        padding: 5rem 0rem;
+    }
+    @include tablet{
+        width: 100vw;
+        position: absolute;
+        top: 60%;
+        left: 0px;
+        padding: 5rem 0rem;
+    }
+
+    .heading--3{
+        transform: translateY(-3rem);
+        @include phone{
+            transform: translateY(-1rem);
+        }
+        @include phone-2{
+            transform: translateY(-1rem);
+        }
+        @include tablet{
+            transform: translateY(-1rem);
+        }
+    }
+
+    .realtor-detail{
+        display: grid;
+        grid-template-columns: min-content max-content;
+        column-gap: 1.3rem;
+        transform: translateY(-.2rem) translateX(-1rem);
+        @include phone{
+            transform: translateY(1.5rem);
+        }
+        @include phone-2{
+            transform: translateY(1.5rem);
+        }
+        @include tablet{
+            transform: translateY(1.5rem);
+        }
+        &:not(:last-child) {
+            margin-bottom: 4vh;
+        }
+
+        img{
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            @include phone{
+                height: 35px;
+                width: 35px;
+            }
+            @include phone-2{
+                height: 35px;
+                width: 35px;
+            }
+            @include tablet{
+                height: 35px;
+                width: 35px;
+            }
+        }
+        
+    }
+
+    &-text{
+        transform: translateY(1rem);
+        color: $color-grey-light-2;
+        .houses-sold{
+            font-size: 1rem;
+            color: currentColor;
+            text-transform: uppercase;
+        }
+
+        @include phone{
+            transform: translateY(0rem);
+        }
+        @include phone-2{
+            transform: translateY(0rem);
+        }
+        @include tablet{
+            transform: translateY(0rem);
+        }
+    }
+
+    &-name{
+        font-size: 1.8rem;
+        font-weight: lighter;
+    }
+}

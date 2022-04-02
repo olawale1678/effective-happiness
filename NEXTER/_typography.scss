@@ -1,0 +1,53 @@
+.heading--4{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.heading--3{
+    @extend .heading--4;
+    font-size: 1.6rem;
+    color: $color-primary;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.heading--2{
+    @extend .heading--4;
+    font-style: italic;
+    color: $color-grey-dark-2;
+    font-size: 4rem;
+}
+
+.btn{
+    border: navajowhite;
+    background-color: $color-primary;
+    color: white;
+    border-radius: 0;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.2rem 3rem;
+    cursor: pointer;
+    @include phone{
+        padding: 1rem 1.7rem;
+        font-size: 1.2rem;
+    }
+    @include phone-2{
+        padding: 1.05rem 1.7rem;
+        font-size: 1.2rem;
+    }
+    @include tablet{
+        padding: 1.05rem 1.7rem;
+        font-size: 1.2rem;
+    }
+
+    transition: all .2s;
+    &:hover{
+        background-color: $color-primary-dark;
+    }
+}
+
+.mb-sm{margin-bottom: 2rem;}
+.mb-md{margin-bottom: 3rem;}
+.mb-lg{margin-bottom: 4rem;}
+.mb-hg{margin-bottom: 8rem;}

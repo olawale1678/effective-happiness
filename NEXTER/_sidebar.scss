@@ -1,0 +1,55 @@
+@import "responsive-setup";
+
+.sidebar{
+    grid-row: 1 / -1;
+    display: inline-block;
+    z-index: 10000;
+    padding: 0px;
+    background-color: $color-primary;
+    font-size: 1rem;
+    @include phone{
+        top: 0px;
+        width: 100%;
+    }
+    @include phone-2{
+        top: 0px;
+        width: 100%;
+    }
+    @include tablet{
+        top: 0px;
+        width: 100%;
+    }
+    @include mini-laptop{
+        top: 0px;
+        width: 100%;
+    }
+}
+
+.nav-btn{
+    border: none;
+    height: .2rem;
+    width: 2.6rem;
+    transform: translateY(15px) translateX(25%);
+    border-radius: 50px;
+    background-color: white;
+    @include phone{}
+
+
+    &::after,
+    &::before{
+        content: "";
+        display: block;
+        height: .2rem;
+        border-radius: 50px;
+        width: 2.6rem;
+        transform: translateY(3px) translateX(2%);
+        margin-top: .7rem;
+        border-radius: 50px;
+        background-color: white;
+        @include phone{}
+    }
+
+    &:active{
+        outline: none;
+    }
+}
